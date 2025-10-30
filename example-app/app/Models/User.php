@@ -44,5 +44,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+
+    }
+    // リレーションを定義
+    public function posts() {
+        return $this->hasMany(Post::class);
     }
 }
